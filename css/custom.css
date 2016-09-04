@@ -1,0 +1,22 @@
+.reveal section .borderless {
+  background: none;
+  border: none;
+  box-shadow: none; }
+
+.reveal section .split-left {
+  float: left;
+  width: 50%; }
+
+.reveal section .split-right {
+  float: right;
+  width: 50%; }
+
+.reveal section#intro .title img, .reveal section#intro .title span {
+  vertical-align: middle; }
+
+.reveal section#intro .title span {
+  font-size: 120px; }
+
+.reveal section#intro .title img {
+  padding-bottom: 10px;
+  padding-right: 25px; }
