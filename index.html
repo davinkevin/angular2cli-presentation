@@ -99,7 +99,7 @@
 						<img data-src="img/jsfatigue/jobdone.gif" alt="">
 					</section>
 				</section>
-				<section>
+				<section id="oldbuildsystems">
 					<section>
 						<h3>What are our tools ?</h3>
 						<img src="img/tools/currenttools.gif" alt="tools" width="400">
@@ -112,6 +112,25 @@
 						<h3>GruntJS</h3>
 						<p class="fragment"><b>First commit : </b> 21 September 2011</p>
 						<p class="fragment"><b># of plugin : </b> 5,887</p>
+					</section>
+					<section>
+						<h3>GruntJS - Config</h3>
+						<pre><code>grunt.initConfig({
+uglify: {
+ build: {
+  src: 'js/reveal.js',
+  dest: 'js/reveal.min.js'
+ }
+},
+
+sass: {
+ core: {
+  files: {
+   'css/reveal.css': 'css/reveal.scss',
+   'css/custom.css': 'css/custom.scss'
+  }
+ }
+}});</code></pre>
 					</section>
 				</section>
 			</div>
