@@ -115,7 +115,7 @@
 					</section>
 					<section>
 						<h3>GruntJS - Config</h3>
-						<pre><code>grunt.initConfig({
+						<pre><code class="hljs javascript">grunt.initConfig({
 uglify: {
  build: {
   src: 'js/reveal.js',
@@ -131,6 +131,31 @@ sass: {
   }
  }
 }});</code></pre>
+					</section>
+					<section>
+						<h3>GulpJS</h3>
+						<img src="img/tools/gulpjs/logo.png" alt="logo" class="borderless" height="300">
+					</section>
+					<section>
+						<h3>GulpJS</h3>
+						<p class="fragment"><b>First commit : </b> 4 July 2013</p>
+						<p class="fragment"><b># of plugin : </b> 2,637</p>
+					</section>
+					<section>
+						<h3>GulpJS - Config</h3>
+						<pre><code class="hljs javascript" >gulp.task('build:js', () =>
+gulp.src('js/reveal.js')
+ .pipe(uglify())
+ ...
+ .pipe(gulp.dest('js/reveal.min.js'))
+);
+
+gulp.task('build:css', () =>
+ gulp.src(['css/reveal.scss', 'css/custom.scss'])
+ .pipe(sass())
+ ...
+ .pipe(gulp.dest('css/'))
+);</code></pre>
 					</section>
 				</section>
 			</div>
