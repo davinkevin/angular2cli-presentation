@@ -95,7 +95,7 @@
 						</ul>
 					</section>
 					<section>
-						<h3>After this, our job is (finally) really done !</h3>
+						<h3>After this, our job is (finally) done !</h3>
 						<img data-src="img/jsfatigue/jobdone.gif" alt="">
 					</section>
 				</section>
@@ -156,6 +156,36 @@ gulp.task('build:css', () =>
  ...
  .pipe(gulp.dest('css/'))
 );</code></pre>
+					</section>
+					<section>
+						<h3>Webpack</h3>
+						<img data-src="img/tools/webpack/logo.png" alt="logo" class="borderless">
+					</section>
+					<section>
+						<h3>Webpack</h3>
+						<p class="fragment"><b>First commit  :</b> 10 March 2012</p>
+						<p class="fragment"><b># of plugin :</b> ??? </p>
+					</section>
+					<section>
+						<h3>Webpack - Config</h3>
+						<pre><code>module.exports = {
+  entry: { index: [ "./src/index.js", ], },
+  output: { path: path.join(__dirname, "dist"), filename: "[name].js", publicPath: "/", },
+  resolve: { extensions: [ "", ".js", ".json", ], },
+
+  module: {
+    loaders: [
+      { test: /\.js$/, loaders: [ "babel", "eslint"] },
+      { test: /\.scss$/, loaders: ["style", "css", "sass"] }
+    ],
+  },
+
+  plugins: [
+	new ExtractTextPlugin("[name].css", {disable: !production}), new webpack.DefinePlugin({ __PROD__: production })
+  ],
+
+  sassLoader: { includePaths: [path.resolve(__dirname, "./some-folder")] }
+}</code></pre>
 					</section>
 				</section>
 			</div>
