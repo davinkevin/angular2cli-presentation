@@ -62,4 +62,4 @@ Thanks the Ember team :D
 * Create its own `Template` (blue-print)
 * Deploy on docker, or everywhere ! (https://github.com/angular/angular-cli/blob/88c77d69275da9328b432c20b836364036792744/docs/design/docker-deploy.md)
 * Install directly from CLI 3rd Party libs
-
+* Hook to integrate with build system
