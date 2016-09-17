@@ -234,11 +234,53 @@ $ ember server</code></pre>
 					</section>
 					<section>
 						<h3>Structure the project</h3>
-						<!--//TODO include capture of arbo-->
+						<pre><code>├── README.md
+├── angular-cli.json
+├── e2e
+│   ├── app.e2e-spec.ts
+│   ├── app.po.ts
+│   └── tsconfig.json
+├── karma.conf.js
+├── package.json
+├── protractor.conf.js
+├── src
+│   ├── app
+│   │   ├── app.component.html
+│   │   ├── app.component.sass
+│   │   ├── app.component.spec.ts
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── index.ts
+│   │   └── shared
+│   │       └── index.ts
+│   ├── environments
+│   │   ├── environment.prod.ts
+│   │   └── environment.ts
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── main.ts
+│   ├── polyfills.ts
+│   ├── styles.sass
+│   ├── test.ts
+│   ├── tsconfig.json
+│   └── typings.d.ts
+└── tslint.json</code></pre>
 						<aside class="notes">
 							Show in the IDE the global structure of the app
 							Show folder shared at each level
 						</aside>
+					</section>
+					<section>
+						<h3>Any Draw-back ?</h3>
+						<pre><code class="nohighlight">4,0K	angular-cli.json
+ 12K	e2e
+4,0K	karma.conf.js
+322M	node_modules
+4,0K	package.json
+4,0K	protractor.conf.js
+4,0K	README.md
+ 64K	src
+4,0K	tslint.json</code></pre>
 					</section>
 					<section>
 						<h3>A lot of helping tools built-in</h3>
