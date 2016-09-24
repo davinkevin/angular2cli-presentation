@@ -33,19 +33,70 @@ Thanks the Ember team :D
 
 ### Live Demo : 
 1. Create a project
-    -> `ng new <project_name>`
+    -> `ng new <project_name> --style=scss`
 2. Edit it
     -> Change the Hello world -> Hello AngularToulouse
 3. Publish it on github
     -> `ng deploy:github`
-4. Create a component <- Just for fun
-    -> `ng g component shared/link`
+4. Create a component
+    -> `ng generate component shared/custom`
+5. Show the evolution of `app.module.ts`
+6. Use the `<custom></custom>` in the `app.component.html` and show it
+7. Remove the `<custom></custom>` from html
+8. Add a service with `ng g service shared/time --flat false`
+    * Serve a date from the service with 
+    ```
+    getNow(): string {
+        return new Date().toString();
+      }
+    ```
+9. Inject the service inside the constructor of the `app.component.ts`
+10. Go back to CLI to show the warning message
+11. Import the service into the `app.module.ts`
+      - with `import {TimeService} from './shared/time/time.service';`
+      - with `providers: [TimeService],`
+12. Change the value `title` inside the `ngOnInit` to become 
+ ```
+ ngOnInit(): void {
+     this.title = this.timeService.getNow();
+   }
+ ```
+13. I want a specific format, and handle more type of date... so install moment
+       - with `npm install moment --save`
+14. Import moment in the `TimeService` :
+       - with `import * as moment from 'moment';`
+15. Change the return of the method `getNow` by : 
+    ```
+    return moment().format('MMMM Do YYYY, h:mm:ss a');
+    ```
+16. Simple with only behavior, I want now the material design element
+        - Go to the `https://github.com/angular/material2/blob/master/GETTING_STARTED.md`
+        - install with `npm install --save @angular2-material/core @angular2-material/button @angular2-material/card`
+17. Import into `app.module.ts` : 
+         - with `import { MdButtonModule } from '@angular2-material/button';`
+         - with `import { MdCardModule } from '@angular2-material/card';`
+         - and `imports: [BrowserModule, FormsModule, HttpModule, MdButtonModule.forRoot(), MdCardModule.forRoot()],`
+18. Change the file `app.component.html`
+         ```
+         <div class="container">
+           <md-card>
+             <md-card-subtitle>Fantastique carte</md-card-subtitle>
+             <md-card-title>La date du jour !</md-card-title>
+             <md-card-content>
+               <p>{{ title }}</p>
+             </md-card-content>
+           </md-card>
+         </div>
+         ```
+19. Add some scss to the file `app.component.scss`
+     ```
+     .container {
+       width: 400px
+     }
+     ```
+20. Add the AngularToulouse logo in `src/assets/` and add to the template
+    -> <img md-card-image src="assets/logo.jpg">
     
-5. Add a service <- To show the `shared folder`
-    -> `ng generate service shared/time.service`
-    * Serve a date from the service with `new Date()`;
-
-6. show the `ng lint` <- TABS vs SPACE war
 
 ## Is it just another yeoman generator ?
 
