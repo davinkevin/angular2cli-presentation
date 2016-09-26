@@ -33,16 +33,16 @@ Thanks the Ember team :D
 
 ### Live Demo : 
 1. Create a project
-    -> `ng new <project_name> --style=scss`
+    -> `ng new angular2-cli-demo --style=scss`
 2. Edit it
     -> Change the Hello world -> Hello AngularToulouse
 3. Publish it on github
-    -> `ng deploy:github`
+    -> `ng github-pages:deploy --message "Deploy with CLI !"`
 4. Create a component
     -> `ng generate component shared/custom`
 5. Show the evolution of `app.module.ts`
-6. Use the `<custom></custom>` in the `app.component.html` and show it
-7. Remove the `<custom></custom>` from html
+6. Use the `<app-custom></app-custom>` in the `app.component.html` and show it
+7. Remove the `<app-custom></app-custom>` from html
 8. Add a service with `ng g service shared/time --flat false`
     * Serve a date from the service with 
     ```
@@ -62,7 +62,7 @@ Thanks the Ember team :D
    }
  ```
 13. I want a specific format, and handle more type of date... so install moment
-       - with `npm install moment --save`
+       - with `npm i -S moment`
 14. Import moment in the `TimeService` :
        - with `import * as moment from 'moment';`
 15. Change the return of the method `getNow` by : 
@@ -96,7 +96,8 @@ Thanks the Ember team :D
      ```
 20. Add the AngularToulouse logo in `src/assets/` and add to the template
     -> <img md-card-image src="assets/logo.jpg">
-    
+21. Publish it on github again
+    -> `ng github-pages:deploy --message "Deploy with CLI the result of demo !"`
 
 ## Is it just another yeoman generator ?
 
